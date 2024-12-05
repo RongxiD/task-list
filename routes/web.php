@@ -55,10 +55,10 @@ $tasks = [
   ),
 ];
 
-Route::get('/', function () {
+Route::get('/', function () use($tasks) {
     // return view('welcome');
     return view('index',[
         // 'name' => 'RC'
-
+        'tasks' => $tasks
     ]);
 });
