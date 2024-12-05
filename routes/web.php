@@ -61,4 +61,8 @@ Route::get('/', function () use($tasks) {
         // 'name' => 'RC'
         'tasks' => $tasks
     ]);
-});
+})->name('tasks.index');
+
+Route::get('/{id}', function($id) {
+    return 'One Single Task';
+})->name('tasks.show');
